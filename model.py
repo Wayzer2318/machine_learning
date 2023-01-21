@@ -27,9 +27,29 @@ def get_dataset():
 
     return features, targets 
 
+def pre_activation(features, wheights, bias):
+    """
+        pre-activation
+    """
+    return(np.dot(features, wheights) + bias)
+
+
+def activation(z):
+    """
+        activation
+    """
+    return 1 / (1 + np.exp(-z))
+
+
 
 if __name__ == "__main__":
+    #rows
     features, targets = get_dataset()
-    init_variables()
+    #variable
+    weights, bias = init_variables()
+    # calculate the pre-activation
+    z = pre_activation(features, weights, bias)
+    a = activation(z)
+    print(a)
     pass
 
