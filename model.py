@@ -1,5 +1,4 @@
 import numpy as np
-
 def init_variables():
     """
         init model variables (weight - bias)
