@@ -1,5 +1,5 @@
 if __name__ == '__main__':
-    fc = lambda x, y: (3*x**2) + (x*y) + (5*y**2)
+    fc = lambda x, y: (3 * x**2) + (x * y) + (5 * y**2)
     # Set partial derivates
     partial_derivative_x = lambda x, y: (6 * x) + y
     partial_derivative_y = lambda x, y: (10 * y) + x
@@ -19,3 +19,7 @@ if __name__ == '__main__':
         y = y - learning_rate * y_gradient
         # Keep track of the function value
         print("Fc = %s" % (fc(x, y)))
+    # Print final variables values
+    print("")
+    print("x = %s" % x)
+    print("y = %s" % y)
